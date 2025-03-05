@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +19,12 @@
         }
 
         .register-container {
-            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 400px;
         }
 
         .logo {
@@ -35,11 +39,13 @@
         }
 
         .register-box {
-            width: 400px;
+            width: 100%;
+            max-width: 400px;
             padding: 30px;
             background: #1A1D26;
             border-radius: 12px;
             box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.2);
+            text-align: center;
         }
 
         h2 {
@@ -92,9 +98,15 @@
         .btn:hover {
             background-color: #1AB85A;
         }
+
+        @media (max-width: 768px) {
+            .register-box {
+                width: 90%;
+                padding: 20px;
+            }
+        }
     </style>
 </head>
-
 <body>
     <div class="register-container">
         <img src="./assets/Logo.png" alt="CECXAI Logo" class="logo">
@@ -121,11 +133,16 @@
                     <label for="confirm-password">Confirm Password</label>
                     <input type="password" id="confirm-password" name="confirm-password" required>
                 </div>
-                <p class="agreement">By clicking Registration, I confirm that I have read and agree to the <a href="#">CECXAI Privacy Statement</a> and the <a href="#">CECXAI Web Site Terms and Conditions</a>.</p>
+                <p class="agreement">
+                    By clicking Registration, I confirm that I have read and agree to the 
+                    <a href="#" style="color: white; text-decoration: underline;">CECXAI Privacy Statement</a> 
+                    and the 
+                    <a href="#" style="color: white; text-decoration: underline;">CECXAI Web Site Terms and Conditions</a>.
+                </p>
+                
                 <button type="submit" class="btn">Sign Up</button>
             </form>
         </div>
     </div>
 </body>
-
 </html>

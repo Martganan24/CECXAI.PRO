@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,22 +7,26 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="icon" href="./assets/favicon.png" type="image/png">
     <style>
-        /* Set background color to match uploaded image */
         body {
             font-family: Arial, sans-serif;
-            background: #0B0145; /* ✅ Matches your uploaded image */
+            background: #0B0145;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-        }
- 
-        .login-container {
-            text-align: center;
+            flex-direction: column;
         }
 
-        /* Logo Styling */
+        .login-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 400px;
+        }
+
         .logo {
             width: 150px;
             margin-bottom: 20px;
@@ -35,23 +38,24 @@
             100% { transform: translateY(-10px); }
         }
 
-        /* Login Box */
         .login-box {
-            width: 500px; /* ✅ Doubled the size */
-            padding: 60px;
-            background: #1A1D26; /* ✅ Updated to match provided image */
+            width: 100%;
+            max-width: 400px;
+            padding: 30px;
+            background: #1A1D26;
             border-radius: 12px;
             box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.2);
+            text-align: center;
         }
 
         h2 {
             color: white;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             font-size: 24px;
         }
 
         .input-group {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             text-align: left;
         }
 
@@ -64,19 +68,18 @@
 
         input {
             width: 100%;
-            padding: 12px;
+            padding: 10px;
             border: none;
             border-radius: 5px;
             font-size: 16px;
             box-shadow: 0 0 8px #20d466;
         }
 
-        /* Login Button */
         .btn {
-            width: calc(50% - 24px);
+            width: 100%;
             padding: 12px;
-            background-color: #20D466; /* ✅ Updated to match provided button color */
-            color: black; /* ✅ Black Text */
+            background-color: #20D466;
+            color: black;
             border: none;
             border-radius: 5px;
             font-size: 18px;
@@ -89,13 +92,12 @@
             background-color: #1AB85A;
         }
 
-        /* Links Styling */
         .links {
             margin-top: 20px;
         }
 
         .links a {
-            color: white; /* ✅ White text */
+            color: white;
             text-decoration: none;
             font-size: 14px;
             margin: 0 10px;
@@ -104,9 +106,15 @@
         .links a:hover {
             text-decoration: underline;
         }
+
+        @media (max-width: 768px) {
+            .login-box {
+                width: 90%;
+                padding: 20px;
+            }
+        }
     </style>
 </head>
-
 <body>
     <div class="login-container">
         <img src="./assets/Logo.png" alt="CECXAI Logo" class="logo">
@@ -130,5 +138,4 @@
         </div>
     </div>
 </body>
-
 </html>
