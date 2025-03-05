@@ -10,22 +10,23 @@ const baseDir = path.join(__dirname);
 // Serve all static files correctly
 app.use(express.static(baseDir));
 
-// Serve login and register pages directly
+// Serve the main page
 app.get("/", (req, res) => {
     res.sendFile(path.join(baseDir, "index.html")); // Main frontend page
 });
 
-app.get("/login.html", (req, res) => {
+// Serve login and register pages
+app.get("/login", (req, res) => {
     res.sendFile(path.join(baseDir, "login.html")); // Login page
 });
 
-app.get("/register.html", (req, res) => {
+app.get("/register", (req, res) => {
     res.sendFile(path.join(baseDir, "register.html")); // Register page
 });
 
 // Start the server
 app.listen(PORT, () => {
     console.log(`✅ Frontend server running at: http://localhost:${PORT}`);
-    console.log(`🔗 Login page: http://localhost:${PORT}/login.html`);
-    console.log(`🔗 Register page: http://localhost:${PORT}/register.html`);
+    console.log(`🔗 Login page: http://localhost:${PORT}/login`);
+    console.log(`🔗 Register page: http://localhost:${PORT}/register`);
 });
