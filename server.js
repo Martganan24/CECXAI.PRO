@@ -17,11 +17,11 @@ app.get("/", (req, res) => {
 
 // Serve login and register pages
 app.get("/login", (req, res) => {
-    res.sendFile(path.join(baseDir, "login.html")); // Login page
+    res.sendFile(path.join(baseDir, "auth", "login.html")); // Login page
 });
 
 app.get("/register", (req, res) => {
-    res.sendFile(path.join(baseDir, "register.html")); // Register page
+    res.sendFile(path.join(baseDir, "auth", "register.html")); // Register page
 });
 
 // Start the server
