@@ -4,26 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - CECXAI</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="../assets/favicon.png" type="image/png">
+    <title>Register - CECXAI</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="icon" href="./assets/favicon.png" type="image/png">
     <style>
-        /* Set background color to match uploaded image */
         body {
             font-family: Arial, sans-serif;
-            background: #0B0145; /* ✅ Matches your uploaded image */
+            background: #0B0145;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
+            flex-direction: column;
         }
 
-        .login-container {
+        .register-container {
             text-align: center;
         }
 
-        /* Logo Styling */
         .logo {
             width: 150px;
             margin-bottom: 20px;
@@ -35,23 +34,22 @@
             100% { transform: translateY(-10px); }
         }
 
-        /* Login Box */
-        .login-box {
-            width: 500px; /* ✅ Doubled the size */
-            padding: 60px;
-            background: #1A1D26; /* ✅ Updated to match provided image */
+        .register-box {
+            width: 400px;
+            padding: 30px;
+            background: #1A1D26;
             border-radius: 12px;
             box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.2);
         }
 
         h2 {
             color: white;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             font-size: 24px;
         }
 
         .input-group {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             text-align: left;
         }
 
@@ -64,19 +62,25 @@
 
         input {
             width: 100%;
-            padding: 12px;
+            padding: 10px;
             border: none;
             border-radius: 5px;
             font-size: 16px;
             box-shadow: 0 0 8px #20d466;
         }
 
-        /* Login Button */
+        .agreement {
+            color: white;
+            font-size: 12px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
         .btn {
-            width: calc(50% - 24px);
+            width: 100%;
             padding: 12px;
-            background-color: #20D466; /* ✅ Updated to match provided button color */
-            color: black; /* ✅ Black Text */
+            background-color: #20D466;
+            color: black;
             border: none;
             border-radius: 5px;
             font-size: 18px;
@@ -88,44 +92,37 @@
         .btn:hover {
             background-color: #1AB85A;
         }
-
-        /* Links Styling */
-        .links {
-            margin-top: 20px;
-        }
-
-        .links a {
-            color: white; /* ✅ White text */
-            text-decoration: none;
-            font-size: 14px;
-            margin: 0 10px;
-        }
-
-        .links a:hover {
-            text-decoration: underline;
-        }
     </style>
 </head>
 
 <body>
-    <div class="login-container">
-        <img src="../assets/Logo.png" alt="CECXAI Logo" class="logo">
-        <div class="login-box">
-            <h2>Login</h2>
+    <div class="register-container">
+        <img src="./assets/Logo.png" alt="CECXAI Logo" class="logo">
+        <div class="register-box">
+            <h2>Sign up your account</h2>
             <form action="#" method="POST">
+                <div class="input-group">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="full-name" required>
+                </div>
                 <div class="input-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" name="email" required>
                 </div>
                 <div class="input-group">
+                    <label for="affiliation">Affiliation Code (Optional)</label>
+                    <input type="text" id="affiliation" name="affiliation">
+                </div>
+                <div class="input-group">
                     <label for="password">Password</label>
                     <input type="password" id="password" name="password" required>
                 </div>
-                <button type="submit" class="btn">Submit</button>
-                <div class="links">
-                    <a href="#">Forgot Password?</a>
-                    <a href="register.html">Register</a>
+                <div class="input-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" required>
                 </div>
+                <p class="agreement">By clicking Registration, I confirm that I have read and agree to the <a href="#">CECXAI Privacy Statement</a> and the <a href="#">CECXAI Web Site Terms and Conditions</a>.</p>
+                <button type="submit" class="btn">Sign Up</button>
             </form>
         </div>
     </div>
