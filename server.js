@@ -4,23 +4,23 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Serve static files from the assets, css, and js folders
-app.use(express.static(path.join(__dirname, "CECXAI.PRO", "assets")));
-app.use(express.static(path.join(__dirname, "CECXAI.PRO", "css")));
-app.use(express.static(path.join(__dirname, "CECXAI.PRO", "js")));
+// Serve static files from the assets folder
+app.use(express.static(path.join(__dirname, 'assets')));
+app.use(express.static(path.join(__dirname, 'css')));
+app.use(express.static(path.join(__dirname, 'js')));
 
 // Serve the index.html as the main page
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "CECXAI.PRO", "index.html"));
+    res.sendFile(path.join(__dirname, "index.html"));
 });
 
 // Serve the login and register pages
 app.get("/login", (req, res) => {
-    res.sendFile(path.join(__dirname, "CECXAI.PRO", "auth", "login.html"));
+    res.sendFile(path.join(__dirname, "login.html"));
 });
 
 app.get("/register", (req, res) => {
-    res.sendFile(path.join(__dirname, "CECXAI.PRO", "auth", "register.html"));
+    res.sendFile(path.join(__dirname, "register.html"));
 });
 
 // Start the server
