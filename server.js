@@ -4,27 +4,24 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Set the base directory properly (pointing to CECXAI.PRO)
-const baseDir = path.join(__dirname, "CECXAI.PRO");
+// Set the base directory properly
+const baseDir = path.join(__dirname);
 
 // Serve all static files correctly
 app.use(express.static(baseDir));
 
-// Serve assets from the "assets" folder properly
-app.use("/assets", express.static(path.join(baseDir, "assets")));
-
-// Serve the main frontend page (index.html)
+// Serve the main page
 app.get("/", (req, res) => {
-    res.sendFile(path.join(baseDir, "index.html"));
+    res.sendFile(path.join(baseDir, "index.html")); // Main frontend page
 });
 
-// Serve login and register pages from the "auth" folder
+// Serve login and register pages
 app.get("/login", (req, res) => {
-    res.sendFile(path.join(baseDir, "auth", "login.html"));
+    res.sendFile(path.join(baseDir, "auth", "login.html")); // Login page
 });
 
 app.get("/register", (req, res) => {
-    res.sendFile(path.join(baseDir, "auth", "register.html"));
+    res.sendFile(path.join(baseDir, "auth", "register.html")); // Register page
 });
 
 // Start the server
