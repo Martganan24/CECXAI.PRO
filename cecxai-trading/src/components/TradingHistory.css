@@ -1,0 +1,87 @@
+.trading-history {
+    background-color: #181818;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #333;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+  }
+  
+  .trading-history h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .trading-history table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .trading-history th,
+  .trading-history td {
+    padding: 10px;
+    border: 1px solid #444;
+  }
+  
+  .trading-history th {
+    background-color: #222;
+  }
+  
+  .trading-history .buy {
+    color: #00c853;
+  }
+  
+  .trading-history .sell {
+    color: #d32f2f;
+  }
+  /* 🔥 Reduce Trading History Width by 25% */
+/* 🔥 Make Trading History Adjustable with Margin */
+.trading-history {
+  width: 90%; /* ✅ Default width (adjustable) */
+  max-width: 1612px; /* ✅ Prevents it from getting too big */
+  min-width: 30px; /* ✅ Prevents it from getting too small */
+  margin-left: 152px; /* ✅ Allows adjusting left margin */
+  margin-right: 10; /* ✅ Allows adjusting right margin */
+  transition: all 0.3s ease-in-out; /* ✅ Smooth adjustments */
+}
+/* 🔥 MOBILE STYLES - TRADING HISTORY */
+@media (max-width: 768px) {
+  .trading-history {
+    width:100%; /* ✅ Make it fit the screen */
+    max-width: 100%; /* ✅ Prevents it from overflowing */
+    min-width: auto; /* ✅ Allows full adjustability */
+    margin: 0; /* ✅ Remove side margins for full width */
+    padding: 0px; /* ✅ Adjust padding for mobile */
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .trading-history h2 {
+    font-size: 16px; /* ✅ Make title adjustable */
+    margin-bottom: 10px;
+  }
+
+  .trading-history table {
+    width: 100%;
+  }
+
+  .trading-history th,
+  .trading-history td {
+    padding: 7px; /* ✅ Reduce padding for smaller screens */
+    font-size: 10px; /* ✅ Adjust text size */
+  }
+
+  .trading-history th {
+    background-color: #222;
+  }
+
+  .trading-history .buy {
+    color: #00c853;
+  }
+
+  .trading-history .sell {
+    color: #d32f2f;
+  }
+}
